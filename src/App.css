@@ -32,6 +32,13 @@
 
 }
 
+.buttons{
+  display:flex;
+  width:75%;
+  justify-content:center;
+  padding-top:15%
+}
+
 .image-container{
   display:flex;
   justify-content: space-around;
@@ -42,6 +49,34 @@
   padding-bottom: 5%;
 }
 
+.brightness-div{
+  display:flex;
+  justify-content: space-between;
+  padding-bottom: 3%;
+}
+.brightness-div button{
+  background-color: rgb(90, 90, 215);
+  color:white;
+  border:none;
+  border-radius: 4px;
+  font-size: medium;
+  font-weight: 400;
+  width:40%
+}
+
+.contrast-div{
+  display:flex;
+  justify-content: space-between;
+}
+.contrast-div button{
+  background-color: rgb(90, 90, 215);
+  color:white;
+  border:none;
+  border-radius: 4px;
+  font-size: medium;
+  font-weight: 400;
+  width:40%
+}
 .download-button{
   background-color: rgb(158, 210, 80);
   border: none;
@@ -72,19 +107,10 @@
   position: absolute;
   left:30%;
   border-radius:17px;
-  height:10%;
+  height:20%;
   
 
 }
-
-.buttons{
-  display:flex;
-  width:75%;
-  justify-content:center;
-  padding-top:10%
-}
-
-
 
 @media (max-width: 768px) {
   .image-container {
@@ -93,41 +119,37 @@
   }
 
   .image {
-    width: 100%;
+    width: 70%;
     margin: 0 auto;
   }
 
   .modifiers {
-    width: 80%;
+    width: 100%;
     padding-bottom:10%;
-    left:9%;
+    left:0%
   }
 
-  .upload-button-label{
-    width: 60%;
-    margin: 0 auto;
-    height:auto;
-
-  }
-
+  .upload-button-label,
   .download-button {
     width: 70%;
     margin: 0 auto;
-    height:100%;
-    padding:2%
-    
+    height:auto;
 
 
   }
 
   .buttons{
-    position: relative;
     flex-direction: column;
-    flex-wrap: nowrap;
-    padding-top: 40%;
-    left:13%;
-    height:100%
+    padding-top: 56%;
+    justify-content:end;
+    height: 100%;
+    align-items:center;
+    left:10%;
+    position: relative;
 
 
   }
+
+  
+  
 }
