@@ -17,9 +17,9 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.upload-button-label:hover{
+/* .upload-button-label:hover{
   transform: scale(1.1);
-}
+} */
 
 .image-upload-input {
   display: none; /* Hide the actual file input */
@@ -89,10 +89,10 @@
   transition: all 0.6s ease;
 }
 
-.download-button:hover{
+/* .download-button:hover{
   transform: scale(1.1);
 }
-
+ */
 
 
 .modifiers{
@@ -124,9 +124,9 @@
   }
 
   .modifiers {
-    width: 100%;
+    width: 90%;
     padding-bottom:10%;
-    left:0%
+    left:3%
   }
 
   .upload-button-label,
@@ -140,16 +140,18 @@
 
   .buttons{
     flex-direction: column;
-    padding-top: 56%;
+    padding-top: 64%;
     justify-content:end;
     height: 100%;
     align-items:center;
-    left:10%;
-    position: relative;
+  
+    
 
 
   }
-
+.contrast-div,.brightness-div{
+  width:90%
+}
   
   
 }
