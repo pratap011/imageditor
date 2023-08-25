@@ -76,3 +76,42 @@
   
 
 }
+
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    padding: 10% 0;
+  }
+
+  .image {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .modifiers {
+    width: 80%;
+    padding-bottom:10%;
+    left:9%;
+  }
+
+  .upload-button-label,
+  .download-button {
+    width: 70%;
+    margin: 0 auto;
+    height:auto;
+
+
+  }
+
+  .buttons{
+    flex-direction: column;
+    padding-top: 40%;
+    justify-content:end;
+    height: 100%;
+    align-items:center;
+    left:10%;
+    position: relative;
+
+
+  }
+}
