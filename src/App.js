@@ -97,7 +97,7 @@ const ImageEditor = () => {
         />
       </div>)}
       </div>)}
-      <div style={{"display":"flex","width":"75%","justifyContent":"center","paddingTop":"10%"}}>
+      <div className="buttons">
       <label className="upload-button-label" htmlFor="image-upload">
         Upload Image
         <input
@@ -107,6 +107,8 @@ const ImageEditor = () => {
           onChange={handleImageUpload}
         />
       </label>
+      <br></br>
+      <br></br>
       <button className='download-button' onClick={handleDownload}>
         Download Modified Image
       </button>
