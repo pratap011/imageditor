@@ -24,7 +24,6 @@ const ImageEditor = () => {
 
     reader.readAsDataURL(file);
   };
- 
 
   const applyImageChanges = () => {
     const canvas = document.createElement('canvas');
@@ -45,32 +44,11 @@ const ImageEditor = () => {
     };
   };
 
-  const handleIncreaseBrightness=()=>{
-    console.log("reached");
-      setBrightness(brightness+5)
-    
-  }
-  const handleDecreaseBrightness=()=>{
-    console.log("reached");
-      setBrightness(brightness-5)
-    
-  }
-
-  const handleDecreaseContrast=()=>{
-    console.log("reached");
-  
-      setContrast(contrast-5);
-    
-  }
-
-  const handleIncreaseContrast=()=>{
-    console.log("reached"); 
-      setContrast(contrast+5);
-    
-  }
+  const handleBrightnessChange = (event) => {
+    setBrightness(event.target.value);
+  };
 
   const handleContrastChange = (event) => {
-    console.log("Reached contrast")
     setContrast(event.target.value);
   };
 
@@ -95,16 +73,31 @@ const ImageEditor = () => {
       {originalImage && <img className="image"  src={modifiedImage || originalImage} alt="Modified" />}
       </div>
       {originalImage&&(<div className="modifiers">
-      {originalImage&&(<div className="brightness-div">
-        <button onClick={handleDecreaseBrightness}>Decrease Brightness</button>
-        <button onClick={handleIncreaseBrightness}>Increase Brightness</button>
+      {originalImage&&(<div>
+        <label htmlFor="brightness">Brightness: </label>
+        <input
+          type="range"
+          id="brightness"
+          min="0"
+          max="200"
+          value={brightness}
+          onChange={handleBrightnessChange}
+        />
       </div>)}
-      {originalImage&&(<div className="contrast-div">
-        <button onClick={handleDecreaseContrast}>Decrease Constrast</button>
-        <button onClick={handleIncreaseContrast}>Increase Contrast</button>
+      {originalImage&&(<div>
+        <label htmlFor="contrast" className='slider-label'>Contrast: </label>
+        <input
+          type="range"
+          id="contrast"
+          min="0"
+          max="200"
+          className="slidebar"
+          value={contrast}
+          onChange={handleContrastChange}
+        />
       </div>)}
       </div>)}
-      <div className="buttons">
+      <div className="submit-buttons">
       <label className="upload-button-label" htmlFor="image-upload">
         Upload Image
         <input
@@ -114,7 +107,6 @@ const ImageEditor = () => {
           onChange={handleImageUpload}
         />
       </label>
-      <br></br>
       <button className='download-button' onClick={handleDownload}>
         Download Modified Image
       </button>
